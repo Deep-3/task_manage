@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .report-table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .report-table th,
+        .report-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .report-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+        }
+
+        .report-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .report-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .no-data {
+            color: #999;
+            text-align: center;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        .summary {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .summary .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .summary .empty-events {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Report</h1>
+
+    <table class="report-table">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Tickets Sold</th>
+                <th>Revenue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+                <tr>
+                    <td>{{event_name}}</td>
+                    <td>{{#if tickets_sold}}{{tickets_sold}}{{else}}N/A{{/if}}</td>
+                    <td>{{#if revenue}}{{revenue}}{{else}}N/A{{/if}}</td>
+                </tr>
+            {{else}}
+                <tr>
+                    <td colspan="3" class="no-data">No data available for this report.</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="summary">
+        <p class="total">Total Events: {{total.length}}</p>
+        <p class="empty-events">Note: Some events may not have ticket sales or revenue data.</p>
+    </div>
+
+</body>
+</html>
