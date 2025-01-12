@@ -13,7 +13,7 @@ app.use(express.json());
 
 //routes
 app.use('/ap',helloriutes);
-app.use('/uses', userRoutes);
+app.use('/ues', userRoutes);
 app.use('/auth', loginRoutes);
 app.use('/event',eventRoutes);
 app.use('/ticket-booking', ticketBookingRoutes);
