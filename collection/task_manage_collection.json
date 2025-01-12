@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "81237b0d-22a5-4dea-bc75-114fb098f976",
+		"name": "Task-manage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40478578"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MzYyNDUzMTQsImV4cCI6MTczNjg1MDExNH0.8cBNYr444UMQE5ivuWcYhCxaHaJK6eS7nN4_fIigwEc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"tttttttrrttpatel\",\"password\":\"ttttettrttt@123\",\"role\":\"customer\",\"email\":\"ddddtrttttdptrpp@gmail.com\",\"mobileno\":8795067954\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MzYyNDUzMTQsImV4cCI6MTczNjg1MDExNH0.8cBNYr444UMQE5ivuWcYhCxaHaJK6eS7nN4_fIigwEc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MzYyNDUzMTQsImV4cCI6MTczNjg1MDExNH0.8cBNYr444UMQE5ivuWcYhCxaHaJK6eS7nN4_fIigwEc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"upp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MzYyNDUzMTQsImV4cCI6MTczNjg1MDExNH0.8cBNYr444UMQE5ivuWcYhCxaHaJK6eS7nN4_fIigwEc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User login",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Deeppatel\",\r\n    \"password\":\"Deep@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ompatel\",\r\n    \"password\":\"om@123\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"utsavpatel\",\r\n    \"password\":\"utsav@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2MzMxNzM4LCJleHAiOjE3MzY5MzY1Mzh9.DPxq5vTRQdbANs7EB6phCraZFh7jfFGZBOTbPEokVeE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2MzMxNzM4LCJleHAiOjE3MzY5MzY1Mzh9.DPxq5vTRQdbANs7EB6phCraZFh7jfFGZBOTbPEokVeE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"event_name\": \" Workshop\",\r\n    \"description\": \"Hands-on workshop on Artificial Intelligence and Machine Learning.\",\r\n    \"location\": \"Tech Campus, Boston\",\r\n    \"date\": \"2025-08-08\",\r\n    \"time\": \"11:00 AM\",\r\n    \"available_tickets\": 150,\r\n    \"price_per_ticket\": 199.99\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2MzMxNzM4LCJleHAiOjE3MzY5MzY1Mzh9.DPxq5vTRQdbANs7EB6phCraZFh7jfFGZBOTbPEokVeE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"time\":\"05:10 PM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/event/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket_booking",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzM2MzMzNDkwLCJleHAiOjE3MzY5MzgyOTB9.9MU6Oo4SYXgEXi6AkeBWUEl_t1ZI8k5I66Fzc68FioE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n  \"user_id\":11,\r\n  \"eventid\": \"1\",\r\n  \"tickets_booked\":4\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ticket-booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ticket-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzM2MzMzNDkwLCJleHAiOjE3MzY5MzgyOTB9.9MU6Oo4SYXgEXi6AkeBWUEl_t1ZI8k5I66Fzc68FioE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ticket-booking/cancel/ef47f5e4-0644-4995-94f3-24199a3dda87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ticket-booking",
+								"cancel",
+								"ef47f5e4-0644-4995-94f3-24199a3dda87"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "eventreport",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2NTMxMjY0LCJleHAiOjE3MzcxMzYwNjR9.-EtcP4O4MShf6B0lhjpW6W9N5oSyJXN84vtfcpDAW2g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/report/classreport/pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"classreport",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customerreport",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2NTMxMjY0LCJleHAiOjE3MzcxMzYwNjR9.-EtcP4O4MShf6B0lhjpW6W9N5oSyJXN84vtfcpDAW2g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/report/customerreport/pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"customerreport",
+								"pdf"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "revenuereport",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2Vycm9sZSI6ImFkbWluIiwiaWF0IjoxNzM2NTMxMjY0LCJleHAiOjE3MzcxMzYwNjR9.-EtcP4O4MShf6B0lhjpW6W9N5oSyJXN84vtfcpDAW2g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/report/revenuereport/pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"report",
+								"revenuereport",
+								"pdf"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
