@@ -18,7 +18,7 @@ app.use('/event',eventRoutes);
 app.use('/ticket-booking', ticketBookingRoutes);
 app.use('/report',reportRoutes);
 
-
+//server
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
