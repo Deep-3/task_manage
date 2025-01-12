@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Revenue Report</h1>
+    <p>Generated on: {{data.generatedDate}}</p>
+
+    <h2>Daily Revenue</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Total Revenue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data.daily}}
+            <tr>
+                <td>{{date}}</td>
+                <td>${{total_revenue}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h2>Weekly Revenue</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Total Revenue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data.weekly}}
+            <tr>
+                <td>Week {{week}}</td>
+                <td>${{total_revenue}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h2>Monthly Revenue</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Total Revenue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data.monthly}}
+            <tr>
+                <td>{{month}}</td>
+                <td>{{total_revenue}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>© 2025 Revenue Report System</p>
+    </div>
+</body>
+</html>
