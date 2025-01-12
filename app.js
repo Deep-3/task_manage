@@ -10,7 +10,7 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
-hello deep
+hello deep with the word
 //routes
 app.use('/users', userRoutes);
 app.use('/auth', loginRoutes);
