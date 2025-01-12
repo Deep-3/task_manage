@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-app.use('/user', userRoutes);
+app.use('/users', userRoutes);
 app.use('/auth', loginRoutes);
 app.use('/event',eventRoutes);
 app.use('/ticket-booking', ticketBookingRoutes);
