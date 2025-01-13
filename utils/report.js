@@ -33,7 +33,7 @@ exports.classReportToPDF = async(res, data,templateName, filename) => {
       footer: {
           height: '10mm',
           contents: {
-              default: '<span style="color: #444;">© 2025 Revenue Report System</span>', // Footer content
+              default: '<span style="color: #444;">© 2025  Report </span>', // Footer content
           }
       }
   };
